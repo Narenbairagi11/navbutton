@@ -1,19 +1,16 @@
 plugins {
-    id 'com.android.library'
+    alias(libs.plugins.android.library)
 }
-apply plugin: 'maven-publish'
 
 android {
-    namespace 'com.narenbairagi.navbutton'
+    namespace 'in.narenbairagi.outlinetextview'
     compileSdk 34
 
     defaultConfig {
         minSdk 24
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -27,19 +24,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-
-//publishing {
-//    publications {
-//        release(MavenPublication) {
-//            from components.getByName('navbutton')
-//            groupId = 'com.github.Narenbairagi11' // Use your GitHub username
-//            artifactId = 'navbutton'   // Repository name
-//            version = '1.0'                    // Version
-//        }
-//    }
-//}
-
-
 
 dependencies {
 
